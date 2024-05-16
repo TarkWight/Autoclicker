@@ -6,7 +6,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(${PROJECT_NAME}
-	source/Autoclicker.cpp
+	source/autoclicker.cpp
+	source/mouse_functions.cpp
+	source/timer_functions.cpp
+	
+	headers/autoclicker.hpp
+	headers/mouse_functions.hpp
+	headers/timer_functions.hpp
 )
 
 if(MSVC)
