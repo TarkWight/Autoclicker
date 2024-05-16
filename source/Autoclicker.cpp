@@ -1,21 +1,18 @@
 #include "../headers/autoclicker.hpp"
 
 int main() {
-    setlocale(LC_ALL, "Russian");
-
-    unsigned long long count{};
-
     startProgramAfterCountdown();
 
+    unsigned long long count{};
     while (true) {
         pressLeftMouseButton();
-        std::cout << " нопка нажата\n";
+        std::cout << "Button pressed\n";
         std::this_thread::sleep_for(std::chrono::minutes(2));
 
         releaseLeftMouseButton();
-        std::cout << " нопка отпущена\n";
+        std::cout << "Button released\n";
 
-        std::cout << "»тераци€ цикла #" << count++ << "\n";
+        std::cout << "Iteration of loop #" << count++ << "\n";
         std::this_thread::sleep_for(std::chrono::minutes(17));
     }
 
